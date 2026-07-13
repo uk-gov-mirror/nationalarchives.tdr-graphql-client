@@ -14,12 +14,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           persist-credentials: false
-      - uses: sbt/setup-sbt@508b753e53cb6095967669e0911487d2b9bc9f41 # v1.1.22
-      - uses: nationalarchives/tdr-github-actions/.github/actions/run-git-secrets@9214d929d74b527c75cdac14ba96812f90b3ebba # v0.0.35
-      - uses: nationalarchives/tdr-github-actions/.github/actions/slack-send@9214d929d74b527c75cdac14ba96812f90b3ebba # v0.0.35
+      - uses: sbt/setup-sbt@66fb4376e81982c7d92a4074170846fff88e2e30 # v1.5.0
+      - uses: nationalarchives/tdr-github-actions/.github/actions/run-git-secrets@e3622e3bbb9019981b3aaf6b278b2fce0c7d812b # v0.0.40
+      - uses: nationalarchives/tdr-github-actions/.github/actions/slack-send@e3622e3bbb9019981b3aaf6b278b2fce0c7d812b # v0.0.40
         if: failure()
         with:
           message: ":warning: Secrets found in repository ${{ inputs.repo-name }}"
